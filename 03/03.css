@@ -11,7 +11,7 @@ header, main, footer {
 }
 
 header {
-  height: 100px;
+  height: 150px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -44,6 +44,49 @@ a {
 
 li:hover, a:hover {
   background-color: brown;
+}
+
+
+main {
+  padding: 20px;
+}
+
+main > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+article > h1 {
+  margin: 20px;
+}
+
+section {
+  background-color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+section > div {
+  display: flex;
+}
+
+section > h2 {
+  margin-bottom: 10px;
+  background-color: gainsboro;
+  padding: 10px;
+}
+
+section p {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+section img {
+  border-radius: 50%;
 }
 
 @media only screen and (max-width : 1024px) {
