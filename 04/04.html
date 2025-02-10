@@ -13,6 +13,9 @@
   <link rel="stylesheet" type="text/css" href="../index.css">
   <link rel="stylesheet" type="text/css" href="../js.css">
   <title>KD01 JS</title>
+
+  <!-- 외부 자바스크립트 -->
+  <script src="./04.js"></script>
 </head>
 
 <body>
@@ -22,9 +25,17 @@
       <a href="../index.html"><i class="fa-solid fa-house"></i></a>
     </header>
     <section>
-
+      <div id="msg">test</div>
+      <div>
+        <button onclick="hello();">확인</button>
+        <button onclick="hello2();">인사</button>
+        <button onclick="myHello('HTML');">HTML</button>
+        <button onclick="myHello('CSS');">CSS</button>
+        <button onclick="myHello('JavaScript');">JS</button>
+      </div>
     </section>
   </main>
+
 </body>
 
 </html>
