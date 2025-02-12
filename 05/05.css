@@ -1,0 +1,23 @@
+form {
+  width: 90%;
+  height: 150px;
+   
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+form > div {
+  margin: 10px;
+  width: 90%;
+ 
+  display: flex;
+  justify-content: center;
+}
+
+/* input[id=txt2] { */
+#txt2 {
+  background-color: beige;
+  color:brown;
+}
