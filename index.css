@@ -71,7 +71,7 @@ article li:hover, #bt1:hover {
   background-color: green;
 }
 
-ul > li {
+ul > li, ol > li {
   list-style: none;
 }
 

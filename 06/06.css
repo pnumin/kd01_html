@@ -1,0 +1,16 @@
+#msg > span {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+  padding: 10px;
+  margin: 5px;
+  
+  border-radius: 50%;
+  background-color: blue;
+  color: white;
+
+  font-size: 15px;
+}
