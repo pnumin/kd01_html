@@ -19,10 +19,14 @@ function lotto() {
     if (!arrLotto.includes(n)) arrLotto.push(n) ;
   }
 
+  arrLotto.splice(6,0, '+'); 
   console.log(arrLotto) ;
-
-  let spanTgs  = arrLotto.map(item => `<span>${item}</span>`)
+  
+  let spanTgs  = arrLotto.map(item => 
+                          item == '+' ? `<span id='spplus'>${item}</span>`
+                                      : `<span class='sp${Math.floor(item / 10)}'>${item}</span>`)
                           .join('');
+
   console.log(spanTgs) ;
-  document.getElementById("msg").innerHTML = spanTgs;
+  document.getElementById("msgLotto").innerHTML = spanTgs;
 }
