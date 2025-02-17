@@ -26,8 +26,6 @@ document.addEventListener('DOMContentLoaded',()=>{
   //span -> node list
   const sps = document.querySelectorAll('span') ;
 
-  
-  
   // console.log(txt1.value)
   // console.log(txt2.value)
   // console.log(sps[0].textContent)
@@ -44,4 +42,18 @@ document.addEventListener('DOMContentLoaded',()=>{
   sel2.addEventListener('change',()=>{
     unitChange(sel2, sel1, txt1, txt2, sps) ;
   });
+
+  //input 입력
+  txt1.addEventListener('input', () => {
+    console.log(txt1.value) ;
+    
+    if (sel1.value == "℃") {  // 섭씨 -> 화씨
+      txt2.value = (( parseFloat(txt1.value) * (9 / 5) ) + 32).toFixed(4) ;
+    }
+    else {  //화씨 -> 섭씨
+      txt2.value = ((parseFloat(txt1.value) - 32) * (5/9)).toFixed(4) ;
+    }
+
+  }) ;
+
 }) ;
