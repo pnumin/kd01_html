@@ -1,5 +1,25 @@
 // 단위변경 
-const unitChange = (s1, s2, txt1, txt2, sps) => {
+const unitChange = (s1, s2, t1, t2, sp1, sp2) => {
+  if (s1.value == "℃") s2.value = "℉" ; 
+  else s2.value = "℃" ;  
+
+  sp1.textContent = s1.value;
+  sp2.textContent  = s2.value;
+
+  t1.value = "" ;
+  t2.value = "" ;
+  txt1.focus();
+}
+
+const unitChange2 = (s1, s2 ,txt1, txt2, sps) => {
+  let s1Id = s1.getAttribute('id') ;
+  console.log("s1Id" ,  s1Id)
+  if (s1Id != 'sel1') {
+    let stp = s1 ;
+    s1 = s2;
+    s2 = stp;
+  }
+  
   if (s1.value == "℃") s2.value = "℉" ; 
   else s2.value = "℃" ;  
 
@@ -9,6 +29,7 @@ const unitChange = (s1, s2, txt1, txt2, sps) => {
   txt2.value = "" ;
   txt1.focus();
 }
+
 
 // DOM 생성 후
 document.addEventListener('DOMContentLoaded',()=>{
@@ -34,13 +55,14 @@ document.addEventListener('DOMContentLoaded',()=>{
   // 첫번째 select 값이 변경이 되었을때
   sel1.addEventListener('change',()=>{
     console.log("sel1", sel1.value)
-    unitChange(sel1, sel2, txt1, txt2, sps) ;
+    // unitChange(sel1, sel2, txt1, txt2, sps[0], sps[1]) ;
+    unitChange2(sel1, sel2, txt1, txt2, sps) ;
     
   });
 
   // 두번째 select 값이 변경이 되었을때
   sel2.addEventListener('change',()=>{
-    unitChange(sel2, sel1, txt1, txt2, sps) ;
+    unitChange(sel2, sel1, txt2, txt1, sps[1], sps[0]) ;
   });
 
   //input 입력
