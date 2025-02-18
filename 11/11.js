@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       img.setAttribute('src', '../img/what.png') ;
       txt1.value = '' ;
       txt1.style.display = 'inline' ;
+      txt1.focus();
       bt.innerHTML = '확인' ;
       return ;
     }
