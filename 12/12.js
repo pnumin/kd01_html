@@ -54,6 +54,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         }
       }
       else if ( arr[idx] == 1 ) {
+        // 실패
         col.innerHTML = '<img src="../img/boom.png">' ;
         msg.innerHTML = "실패!" ;
 
