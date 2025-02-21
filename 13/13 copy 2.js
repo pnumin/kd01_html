@@ -1,7 +1,7 @@
 let pArr = [] ;
 
 const getPost = async (mvName) => {
-  let apiKey = 'b42483d9af611184a5e87b9980e11075' ;
+  let apiKey = '' ;
   let baseUrl = 'https://api.themoviedb.org/3/search/movie?' ;
   let url = `${baseUrl}api_key=${apiKey}&query=${mvName}`;
 
@@ -20,7 +20,7 @@ const getPost = async (mvName) => {
   
 }
 const getFetch = async(dt, ul) => {
-  let apiKey = '2a350cfbca6c428eb04c71e21cc681e7' ;
+  let apiKey = '' ;
   let baseUrl = 'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?' ;
   let url = `${baseUrl}key=${apiKey}&targetDt=${dt}` ;
   console.log('getFetch',url);
